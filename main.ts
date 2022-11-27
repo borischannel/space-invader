@@ -1,3 +1,7 @@
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    led.stopAnimation()
+    game.gameOver()
+})
 input.onButtonPressed(Button.A, function () {
     defender.move(-1)
 })
@@ -8,10 +12,6 @@ input.onButtonPressed(Button.AB, function () {
         basic.pause(100)
     }
     bullet.delete()
-})
-input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    led.stopAnimation()
-    game.gameOver()
 })
 input.onButtonPressed(Button.B, function () {
     defender.move(1)
